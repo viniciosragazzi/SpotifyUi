@@ -181,7 +181,7 @@ body {
             overflow: hidden;
             position: relative;
             border: none;
-
+            cursor: grab;
             transition: 0.5s ease-in-out transform;
 
             &:after {
@@ -195,7 +195,7 @@ body {
             &.firt-card {
               margin-left: 0 !important;
             }
-  
+
             img {
               width: 100%;
               position: absolute;
@@ -229,7 +229,6 @@ body {
               }
             }
           }
-         
         }
       }
       #seta-scroll {
@@ -254,10 +253,11 @@ body {
   }
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   background-color: red;
 }
-.swiper-button-prev, .swiper-button-next{
+.swiper-button-prev,
+.swiper-button-next {
   color: white !important;
 }
 /*
@@ -288,6 +288,58 @@ body::-webkit-scrollbar-thumb {
   );
 }
 
+@media (max-width: 505px) {
+  body #all-page #container-area #cards-track {
+    display: none;
+  }
+}
+@media (max-width: 978px) {
+  body #all-page #container-area #cards-track .cards .card .card-img {
+    top: -155px !important;
+  }
+}
+@media (max-width: 1024px) {
+  body #all-page #sidebar {
+    width: 97px;
+  }
+  body #all-page #container-area {
+    width: calc(100% - 97px);
+    margin-left: 97px;
+  }
+  body #all-page #container-area #cards-track .cards .card {
+    max-width: 100% !important;
+  }
+  body #all-page #container-area #cards-track .cards .card img {
+    top: -100%;
+  }
+  span {
+    color: white;
+    font-size: 21px !important;
+  }
+  body
+    #all-page
+    #container-area
+    #cards-track
+    .cards
+    .card
+    .content-card
+    .desc-content
+    .img-desc
+    img {
+    top: 0px;
+    width: 100%;
+  }
+}
+@media (max-width: 1025px) {
+  body #all-page #container-area #page-top {
+    width: 80%;
+  }
+}
+@media (max-width: 1439px) and (min-width: 1189px) {
+  body #all-page #container-area #cards-track {
+    max-width: 79vw;
+  }
+}
 @media (max-width: 1440px) {
   body #all-page #container-area #page-top #user-area {
     max-width: 263px;
@@ -305,7 +357,7 @@ body::-webkit-scrollbar-thumb {
     width: 44px !important;
   }
   body #all-page #container-area #cards-track .cards .card {
-    min-width: 348px !important;
+    min-width: 348px;
     height: 342px !important;
   }
   body
@@ -355,22 +407,6 @@ body::-webkit-scrollbar-thumb {
   p,
   ::placeholder {
     color: white;
-    font-size: 14px !important;
+    font-size: 21px !important;
   }
-}
-
-@media (max-width: 768px) {
-  body #all-page #sidebar {
-    width: 97px;
-  }
-  body #all-page #container-area {
-    width: calc(100% - 97px);
-    margin-left: 97px;
-  }
-}
-
-@media (max-width: 1025px){
-  body #all-page #container-area #page-top {
-    width: 80%;
-}
 }

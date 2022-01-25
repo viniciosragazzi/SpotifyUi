@@ -44,21 +44,36 @@
 
 let swiperCards = new Swiper("#cards-track", {
     slidesPerView:1,
-    spaceBetween: 30,
+    spaceBetween: 10,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
  
     breakpoints: {
+        0: {
+            slidesPerView:1
+        },
         544: {
             slidesPerView:1,
             spaceBetween: 500, 
         },
+        
         768: {
-          slidesPerView:3,
-          spaceBetween: 30,
+          slidesPerView:1,
         },
+        1024: {
+            slidesPerView:2,
+            spaceBetween: 20,
+          },
+          1440: {
+            slidesPerView:3,
+            spaceBetween: 30,
+          },
+          1366: {
+            slidesPerView:3,
+            spaceBetween: 30,
+          },
         1441: {
             slidesPerView:4,
             spaceBetween: 30,
