@@ -165,6 +165,7 @@ body #all-page #container-area #cards-track {
   margin-top: 30px;
   position: relative;
   top: 100px;
+  padding-left: 40px;
 }
 body #all-page #container-area #cards-track h3 {
   color: white;
@@ -172,17 +173,8 @@ body #all-page #container-area #cards-track h3 {
 body #all-page #container-area #cards-track .cards {
   display: flex;
   margin-top: 33px;
+  max-width: 850px;
   height: 439px;
-  overflow: hidden;
-}
-body #all-page #container-area #cards-track .cards:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: "";
-  box-shadow: inset -100px 4px 47px -14px rgba(0, 0, 0, 0.94);
 }
 body #all-page #container-area #cards-track .cards .carousel-item {
   height: 400px;
@@ -200,17 +192,16 @@ body #all-page #container-area #cards-track .cards .green:after {
   box-shadow: inset 0px -100px 100px -60px #00f05c;
 }
 body #all-page #container-area #cards-track .cards .card {
-  min-width: 440px !important;
+  max-width: 440px !important;
   height: 440px !important;
   background-color: black;
   border-radius: 50px;
   overflow: hidden;
   position: relative;
   border: none;
-  margin-left: 20px;
   transition: 0.5s ease-in-out transform;
 }
-body #all-page #container-area #cards-track .cards:after {
+body #all-page #container-area #cards-track .cards .card:after {
   position: absolute;
   top: 0;
   right: 0;
@@ -218,15 +209,15 @@ body #all-page #container-area #cards-track .cards:after {
   left: 0;
   content: "";
 }
-body #all-page #container-area #cards-track .cards.firt-card {
+body #all-page #container-area #cards-track .cards .card.firt-card {
   margin-left: 0 !important;
 }
-body #all-page #container-area #cards-track .cards img {
+body #all-page #container-area #cards-track .cards .card img {
   width: 100%;
   position: absolute;
   top: -12%;
 }
-body #all-page #container-area #cards-track .cards .content-card {
+body #all-page #container-area #cards-track .cards .card .content-card {
   width: 100%;
   height: 100%;
   display: flex;
@@ -234,21 +225,21 @@ body #all-page #container-area #cards-track .cards .content-card {
   z-index: 900;
   padding: 50px;
 }
-body #all-page #container-area #cards-track .cards .content-card .desc-content {
+body #all-page #container-area #cards-track .cards .card .content-card .desc-content {
   display: flex;
   width: 100%;
   position: absolute;
   top: 350px;
 }
-body #all-page #container-area #cards-track .cards .content-card .desc-content .img-desc {
+body #all-page #container-area #cards-track .cards .card .content-card .desc-content .img-desc {
   width: 80px;
   padding: 5px;
 }
-body #all-page #container-area #cards-track .cards .content-card .desc-content .img-desc img {
+body #all-page #container-area #cards-track .cards .card .content-card .desc-content .img-desc img {
   width: 100%;
   position: relative;
 }
-body #all-page #container-area #cards-track .cards .content-card .desc-content .desc-txt {
+body #all-page #container-area #cards-track .cards .card .content-card .desc-content .desc-txt {
   display: flex;
   flex-direction: column;
   margin-left: 30px;
@@ -270,6 +261,14 @@ body #all-page .players-area {
 }
 body #all-page .players-area p {
   color: white;
+}
+
+.swiper-pagination-bullet {
+  background-color: red;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: white !important;
 }
 
 /*
