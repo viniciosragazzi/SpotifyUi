@@ -5,9 +5,13 @@
 
 :root {
   --black: #000000;
+  --black-t2: #0d0d0d;
+  --black-t3: #1A1A1A;
   --black-t5: #333333;
+  --blue-t5: #859dff;
   --bg: #1a1a1a;
   --gray-t3: #e5e7eb;
+  --gray-t5: #9ca3af;
 }
 
 .text-xs {
@@ -19,11 +23,11 @@
 }
 
 .text-base {
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 .text-lg {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 
 .text-xl {
@@ -60,7 +64,7 @@ body {
 }
 body .barra {
   width: 100vw;
-  height: 80px;
+  height: 123px;
   background-color: black;
   position: fixed;
   top: 0;
@@ -71,7 +75,7 @@ body span {
 }
 body #all-page {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 body #all-page #sidebar {
   width: 133px;
@@ -225,7 +229,7 @@ body #all-page #container-area #cards-track .cards .card .content-card {
   display: flex;
   flex-direction: column;
   z-index: 900;
-  padding: 50px;
+  padding: 30px;
 }
 body #all-page #container-area #cards-track .cards .card .content-card .desc-content {
   display: flex;
@@ -234,7 +238,7 @@ body #all-page #container-area #cards-track .cards .card .content-card .desc-con
   top: 350px;
 }
 body #all-page #container-area #cards-track .cards .card .content-card .desc-content .img-desc {
-  width: 80px;
+  width: 70px;
   padding: 5px;
 }
 body #all-page #container-area #cards-track .cards .card .content-card .desc-content .img-desc img {
@@ -260,9 +264,175 @@ body #all-page #container-area #seta-scroll img {
 body #all-page .players-area {
   position: relative;
   top: 150px;
+  padding: 0 20px;
 }
-body #all-page .players-area p {
+body #all-page .players-area .areas {
+  margin: 45px 0;
+}
+body #all-page .players-area .areas h3 {
   color: white;
+  margin-bottom: 45px;
+}
+body #all-page .players-area .areas .area-card {
+  display: flex;
+  width: 98%;
+  background-color: var(--black-t2);
+  min-height: 317px;
+  border-radius: 5%;
+  border: 1px solid var(--black-t5);
+}
+body #all-page .players-area .areas #loFi-card {
+  position: relative;
+  padding: 29px 30px;
+  margin: 45px 0;
+}
+body #all-page .players-area .areas #loFi-card .lofi-1 {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  margin-right: 16px;
+}
+body #all-page .players-area .areas #loFi-card .lofi-1 img {
+  width: 100%;
+  border-radius: 10px;
+}
+body #all-page .players-area .areas #loFi-card .lofi-2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body #all-page .players-area .areas #loFi-card .lofi-2 img {
+  width: 134px;
+  margin: 5px;
+  border-radius: 8px;
+}
+body #all-page .players-area .areas #musics-card {
+  position: relative;
+  padding: 29px 30px;
+  display: flex;
+  flex-direction: column;
+}
+body #all-page .players-area .areas #musics-card .music-area {
+  display: flex;
+  justify-content: space-between;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  align-items: center;
+  margin-top: 35px;
+}
+body #all-page .players-area .areas #musics-card .music-area .img-music {
+  width: 60px;
+  height: 60px;
+  margin-right: 25px;
+}
+body #all-page .players-area .areas #musics-card .music-area .img-music img {
+  width: 100%;
+  border-radius: 5px;
+}
+body #all-page .players-area .areas #musics-card .music-area .info-music {
+  display: flex;
+  align-items: center;
+  width: 55%;
+  margin-right: 26px;
+  justify-content: inherit;
+}
+body #all-page .players-area .areas #musics-card .music-area .info-music .info {
+  line-height: 31px;
+}
+body #all-page .players-area .areas #musics-card .music-area .info-music .info .nome-music {
+  color: white;
+}
+body #all-page .players-area .areas #musics-card .music-area .info-music .info .nome-autor {
+  color: var(--gray-t5);
+}
+body #all-page .players-area .areas #musics-card .music-area .buttons-musics {
+  width: 122px;
+  height: 64px;
+  border: 1px solid var(--gray-t5);
+  padding: 5px;
+  position: relative;
+  border-radius: 35px;
+}
+body #all-page .players-area .areas #musics-card .music-area .buttons-musics img {
+  margin: 0 5px;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.5s ease-in-out opacity;
+}
+body #all-page .players-area .areas #musics-card .music-area .buttons-musics img:hover {
+  opacity: 0.7;
+}
+body #all-page .players-area .areas #musics-card .music-area .buttons-musics img.play {
+  top: 0px;
+  right: -8px;
+  background-color: var(--black-t2);
+  border-radius: 50%;
+}
+body #all-page .players-area .areas #musics-card .music-area .buttons-musics img.heart {
+  top: 15px;
+  left: 15px;
+  width: 30px;
+}
+body #all-page .players-area .areas #friends-card {
+  flex-direction: column;
+  padding: 10px 0;
+  min-width: 296px;
+}
+body #all-page .players-area .areas #friends-card h3 {
+  margin-left: 15px;
+  margin-top: 25px;
+}
+body #all-page .players-area .areas #friends-card #div-friends {
+  margin-bottom: 50px;
+}
+body #all-page .players-area .areas #friends-card #div-friends .friend-area {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  align-self: self-start;
+  margin-bottom: 10px;
+}
+body #all-page .players-area .areas #friends-card #div-friends .friend-area .friend-picture {
+  width: 55px;
+  margin-right: 5px;
+}
+body #all-page .players-area .areas #friends-card #div-friends .friend-area .friend-picture img {
+  width: 100%;
+}
+body #all-page .players-area .areas #friends-card #div-friends .friend-area .friend-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+body #all-page .players-area .areas #friends-card #div-friends .friend-area .friend-info .friend-name {
+  color: white;
+  font-weight: 600;
+}
+body #all-page .players-area .areas #friends-card #div-friends .friend-area .friend-info .friend-status {
+  color: var(--gray-t5);
+}
+body #all-page .players-area .areas #friends-card #div-friends .friend-area .friend-info .friend-status i {
+  margin-right: 5px;
+  color: #00f100;
+}
+body #all-page .players-area .areas #friends-card .button-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body #all-page .players-area .areas #friends-card .button-area button {
+  width: 80%;
+  padding: 14px;
+  border: none;
+  background-color: var(--black-t5);
+  color: white;
+  border-radius: 8px;
+  transition: 0.4s ease-in-out background;
+}
+body #all-page .players-area .areas #friends-card .button-area button:hover {
+  background-color: var(--black-t3);
 }
 
 .swiper-pagination-bullet {
@@ -298,12 +468,6 @@ body::-webkit-scrollbar-thumb {
   body #all-page #container-area #cards-track {
     display: none;
   }
-  body #all-page #container-area #page-top {
-    width: 78% !important;
-}
-body #all-page #container-area #page-top #user-area {
-  display: none;
-}
 }
 @media (max-width: 978px) {
   body #all-page #container-area #cards-track .cards .card .card-img {
@@ -343,7 +507,7 @@ body #all-page #container-area #page-top #user-area {
     width: 80%;
   }
 }
-@media (max-width: 1439px) and (min-width: 1367px) {
+@media (max-width: 1439px) and (min-width: 1189px) {
   body #all-page #container-area #cards-track {
     max-width: 79vw;
   }
@@ -368,7 +532,6 @@ body #all-page #container-area #page-top #user-area {
   }
 
   body #all-page #container-area #cards-track .cards .card {
-    min-width: 348px;
     height: 342px !important;
   }
 
@@ -412,5 +575,84 @@ p,
 ::placeholder {
     color: white;
     font-size: 21px !important;
+  }
+}
+@media (max-width: 1832px) and (min-width: 1367px) {
+  body #all-page .players-area .areas #loFi-card {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1644px) {
+  body #all-page .players-area #listen-area {
+    display: none;
+  }
+
+  body #all-page .players-area #tracks-area {
+    width: 100%;
+  }
+
+  body #all-page .players-area #friends-area {
+    width: 100%;
+  }
+}
+@media (max-width: 1366px) {
+  body #all-page {
+    margin-top: 50px;
+  }
+
+  ::-moz-placeholder {
+    font-size: 16px !important;
+  }
+
+  :-ms-input-placeholder {
+    font-size: 16px !important;
+  }
+
+  span,
+p,
+::placeholder {
+    font-size: 16px !important;
+  }
+
+  body .barra {
+    width: 100vw;
+  }
+
+  body #all-page .players-area #tracks-area {
+    width: 100%;
+    width: 65% !important;
+  }
+
+  body #all-page .players-area #friends-area {
+    width: 100%;
+    width: 35% !important;
+  }
+
+  body #all-page .players-area .areas #loFi-card .lofi-1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  body #all-page .players-area .areas #loFi-card .lofi-1 img {
+    width: 50%;
+  }
+}
+@media (max-width: 1094px) {
+  body #all-page .players-area .areas {
+    width: 98% !important;
+  }
+}
+@media (max-width: 954px) {
+  body #all-page .players-area .areas #loFi-card {
+    flex-direction: column;
+  }
+
+  body #all-page .players-area #tracks-area {
+    width: 100% !important;
+  }
+
+  body #all-page .players-area #friends-area {
+    width: 100%;
+    width: 100% !important;
   }
 }/*# sourceMappingURL=style.css.map */

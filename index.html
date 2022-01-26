@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS Padrão-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!--CSS Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!--JS Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!--FAVICON-->
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/medias/favicon-96x96.png">
+
+    <!--Swipper CSs-->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+    <title>Spotify Redesign - Inicio</title>
+</head>
+
+<body>
+    <div class="barra"></div>
+    <div id="all-page">
+        <!--SIDEBAR-->
+        <nav class="navbar d-flex navbar-expand align-items-center flex-column" id="sidebar">
+            <a class="top-page_img" href="#">
+                <img src="./assets/medias/img/topoAssets/SpotifyLogo.svg" class="logo-spotify" alt="spotify_logo" />
+            </a>
+            <ul class="navbar-nav d-flex flex-column mt-3 w-100">
+                <li class="nav-item mt-4 w-100 d-flex justify-content-center">
+                    <a href="#" class="nav-link active">
+                        <img src="./assets/medias/img/sidebarAssets/Home.svg" alt="Home" />
+                    </a>
+                </li>
+                <li class="nav-item mt-4 w-100 d-flex justify-content-center">
+                    <a href="#" class="nav-link">
+                        <img src="./assets/medias/img/sidebarAssets/Compass.svg" alt="Compass" />
+                    </a>
+                </li>
+                <li class="nav-item mt-4 w-100 d-flex justify-content-center">
+                    <a href="#" class="nav-link">
+                        <img src="./assets/medias/img/sidebarAssets/microphone.svg" alt="microphone" />
+                    </a>
+                </li>
+                <li class="nav-item mt-4 w-100 d-flex justify-content-center">
+                    <a href="#" class="nav-link">
+                        <img src="./assets/medias/img/sidebarAssets/collection.svg" alt="collection" />
+                    </a>
+                </li>
+                <li class="nav-item mt-4 w-100 d-flex justify-content-center">
+                    <a href="#" class="nav-link">
+                        <img src="./assets/medias/img/sidebarAssets/heart.svg" alt="heart" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--TOP -->
+        <div id="container-area">
+            <div id="page-top">
+                <div id="search-area">
+                    <img src="./assets/medias/img/topoAssets/EllipseSearch.svg" alt="EllipseSearch">
+                    <input type="search" name="search-topo" placeholder="Search..." id="search-topo">
+                    <div class="filter-btn">
+                        <img src="./assets/medias/img/topoAssets/adjustments.svg" alt="" srcset="">
+                        <span>Filter</span>
+                    </div>
+                </div>
+                <div id="user-area">
+                    <img src="./assets/medias/img/topoAssets/badge-check.svg" alt="check">
+                    <img src="./assets/medias/img/topoAssets/flag.svg" alt="flag">
+                    <img src="./assets/medias/img/topoAssets/cog.svg" alt="adjustments">
+                    <img src="./assets/medias/img/topoAssets/bell.svg" alt="bell">
+                    <img src="./assets/medias/img/topoAssets/Logo.jpg" class="avatar" alt="ProfilePicture">
+                </div>
+            </div>
+            <!-- Slider main container -->
+            <div id="cards-track" class="swiper">
+                <!-- Additional required wrapper -->
+                <h3 class="text-2xl">PlayList For You</h3>
+                <div class="cards swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="card yellow swiper-slide ">
+                        <img class="card-img" src="./assets/medias/img/cardsImg/M2.png" alt="" srcset="">
+                        <div class="content-card">
+                            <span class="text-lg">39 Tracks</span>
+
+                            <div class="desc-content">
+                                <div class="img-desc">
+                                    <img src="./assets/medias/img/cardsImg/play.png" alt="play">
+                                </div>
+                                <div class="desc-txt">
+                                    <span class="desc-title text-lg ">Chill Mix</span>
+                                    <span class="desc-subtitle text-base">Just relax and listen</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card pink swiper-slide">
+                        <img class="card-img" src="./assets/medias/img/cardsImg/MA1.png" alt="" srcset="">
+                        <div class="content-card">
+                            <span class="text-lg">26 Tracks</span>
+
+                            <div class="desc-content">
+                                <div class="img-desc">
+                                    <img src="./assets/medias/img/cardsImg/play.png" alt="play">
+                                </div>
+                                <div class="desc-txt">
+                                    <span class="desc-title text-lg ">Gamer Mix</span>
+                                    <span class="desc-subtitle text-base">listen while you play</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card blue swiper-slide">
+                        <img class="card-img" src="./assets/medias/img/cardsImg/M1.png" alt="" srcset="">
+                        <div class="content-card">
+                            <span class="text-lg">26 Tracks</span>
+
+                            <div class="desc-content">
+                                <div class="img-desc">
+                                    <img src="./assets/medias/img/cardsImg/play.png" alt="play">
+                                </div>
+                                <div class="desc-txt">
+                                    <span class="desc-title text-lg ">Future Mix</span>
+                                    <span class="desc-subtitle text-base">Of your favorites</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card green swiper-slide">
+                        <img class="card-img" src="./assets/medias/img/cardsImg/H1.png" alt="" srcset="">
+                        <div class="content-card">
+                            <span class="text-lg">39 Tracks</span>
+
+                            <div class="desc-content">
+                                <div class="img-desc">
+                                    <img src="./assets/medias/img/cardsImg/play.png" alt="play">
+                                </div>
+                                <div class="desc-txt">
+                                    <span class="desc-title text-lg ">Classical Mix</span>
+                                    <span class="desc-subtitle text-base">Just relax and listen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card yellow swiper-slide ">
+                        <img class="card-img" src="./assets/medias/img/cardsImg/M2.png" alt="" srcset="">
+                        <div class="content-card">
+                            <span class="text-lg">39 Tracks</span>
+
+                            <div class="desc-content">
+                                <div class="img-desc">
+                                    <img src="./assets/medias/img/cardsImg/play.png" alt="play">
+                                </div>
+                                <div class="desc-txt">
+                                    <span class="desc-title text-lg ">Chill Mix</span>
+                                    <span class="desc-subtitle text-base">Just relax and listen</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card pink swiper-slide">
+                        <img class="card-img" src="./assets/medias/img/cardsImg/MA1.png" alt="" srcset="">
+                        <div class="content-card">
+                            <span class="text-lg">26 Tracks</span>
+
+                            <div class="desc-content">
+                                <div class="img-desc">
+                                    <img src="./assets/medias/img/cardsImg/play.png" alt="play">
+                                </div>
+                                <div class="desc-txt">
+                                    <span class="desc-title text-lg ">Future Mix</span>
+                                    <span class="desc-subtitle text-base">Of your favorites</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card green swiper-slide">
+                        <img class="card-img" src="./assets/medias/img/cardsImg/H1.png" alt="" srcset="">
+                        <div class="content-card">
+                            <span class="text-lg">39 Tracks</span>
+
+                            <div class="desc-content">
+                                <div class="img-desc">
+                                    <img src="./assets/medias/img/cardsImg/play.png" alt="play">
+                                </div>
+                                <div class="desc-txt">
+                                    <span class="desc-title text-lg ">Classical Mix</span>
+                                    <span class="desc-subtitle text-base">Just relax and listen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card blue swiper-slide">
+                        <img class="card-img" src="./assets/medias/img/cardsImg/M1.png" alt="" srcset="">
+                        <div class="content-card">
+                            <span class="text-lg">47 Tracks</span>
+
+                            <div class="desc-content">
+                                <div class="img-desc">
+                                    <img src="./assets/medias/img/cardsImg/play.png" alt="play">
+                                </div>
+                                <div class="desc-txt">
+                                    <span class="desc-title text-lg ">Gamer Mix</span>
+                                    <span class="desc-subtitle text-base">listen while you play</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card pink swiper-slide">
+                        <img class="card-img" src="./assets/medias/img/cardsImg/MA1.png" alt="" srcset="">
+                        <div class="content-card">
+                            <span class="text-lg">26 Tracks</span>
+
+                            <div class="desc-content">
+                                <div class="img-desc">
+                                    <img src="./assets/medias/img/cardsImg/play.png" alt="play">
+                                </div>
+                                <div class="desc-txt">
+                                    <span class="desc-title text-lg ">Future Mix</span>
+                                    <span class="desc-subtitle text-base">Of your favorites</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card green swiper-slide">
+                        <img class="card-img" src="./assets/medias/img/cardsImg/H1.png" alt="" srcset="">
+                        <div class="content-card">
+                            <span class="text-lg">39 Tracks</span>
+
+                            <div class="desc-content">
+                                <div class="img-desc">
+                                    <img src="./assets/medias/img/cardsImg/play.png" alt="play">
+                                </div>
+                                <div class="desc-txt">
+                                    <span class="desc-title text-lg ">Classical Mix</span>
+                                    <span class="desc-subtitle text-base">Just relax and listen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="players-area row col-12">
+                 <!----------------LISTEN AREA----------------->
+                <div id="listen-area" class="areas col-12 col-xl-5">
+                    <h3 class="text-2xl area-title">
+                        What you listen to the most
+                    </h3>
+                    <div id="loFi-card" class="area-card">
+                        <div class="lofi-1">
+                            <img src="./assets/medias/img/chill-img/1.png" alt="lofi-principal">
+                        </div>
+                        <div class="lofi-2">
+                            <img src="./assets/medias/img/chill-img/2.png" alt="lofi-2">
+                            <img src="./assets/medias/img/chill-img/3.png" alt="lofi-3">
+                            <img src="./assets/medias/img/chill-img/4.png" alt="lofi-4">
+                            <img src="./assets/medias/img/chill-img/5.png" alt="lofi-5">
+                        </div>
+                    </div>
+                    <div id="loFi-card" class="area-card">
+                        <div class="lofi-1">
+                            <img src="./assets/medias/img/chill-img/image 1.png" alt="lofi-principal">
+                        </div>
+                        <div class="lofi-2">
+                            <img src="./assets/medias/img/chill-img/image 10.png" alt="lofi-2">
+                            <img src="./assets/medias/img/chill-img/image 2.png" alt="lofi-3">
+                            <img src="./assets/medias/img/chill-img/image 8.png" alt="lofi-4">
+                            <img src="./assets/medias/img/chill-img/image 9.png" alt="lofi-5">
+                        </div>
+                    </div>
+                    <div id="loFi-card" class="area-card">
+                        <div class="lofi-1">
+                            <img src="./assets/medias/img/chill-img/1.png" alt="lofi-principal">
+                        </div>
+                        <div class="lofi-2">
+                            <img src="./assets/medias/img/chill-img/2.png" alt="lofi-2">
+                            <img src="./assets/medias/img/chill-img/3.png" alt="lofi-3">
+                            <img src="./assets/medias/img/chill-img/4.png" alt="lofi-4">
+                            <img src="./assets/medias/img/chill-img/5.png" alt="lofi-5">
+                        </div>
+                    </div>
+                </div>
+                <!----------------TRACKS AREA----------------->
+                <div id="tracks-area" class="areas col-12 col-xl-5">
+                    <h3 class="text-2xl area-title">
+                        Tracks of the week
+                    </h3>
+                    <div id="musics-card" class="area-card">
+                    </div>
+                </div>
+
+                 <!----------------FRIENDS AREA----------------->
+                <div id="friends-area" class="areas col-12 col-xl-2">
+                    <h3 class="text-2xl area-title">
+                        Friends Activity
+                    </h3>
+                    <div id="friends-card" class="area-card">
+                        <h3 class="text-2xl">My Friends</h3>
+
+                        <div id="div-friends">
+                          
+                        </div>
+                        
+                        <div class="button-area">
+                            <button id="view-all"> View All</button>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--=============SWIPPER JS ==================-->
+    <script src="./assets/scripts/swiper-bundle.min.js"></script>
+    <script src="./assets/scripts/script.js"></script>
+</body>
+
+</html>
