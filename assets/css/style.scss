@@ -6,12 +6,29 @@
 :root {
   --black: #000000;
   --black-t2: #0d0d0d;
-  --black-t3: #1A1A1A;
+  --black-t3: #1a1a1a;
   --black-t5: #333333;
   --blue-t5: #859dff;
   --bg: #1a1a1a;
   --gray-t3: #e5e7eb;
   --gray-t5: #9ca3af;
+  --green-t1: #2bd268;
+}
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-thumb {
+  background: #1ed760;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #04b344;
+}
+::-webkit-scrollbar-track {
+  background: #ccffdf;
+  border-radius: 0px;
+  box-shadow: inset 0px 0px 0px 0px #f0f0f0;
 }
 .text-xs {
   font-size: 0.75rem;
@@ -50,6 +67,7 @@ body {
   position: relative;
   top: -33px;
   margin-top: 60px !important;
+  overflow-x: hidden;
   .barra {
     width: 100vw;
     height: 123px;
@@ -64,6 +82,9 @@ body {
   #all-page {
     width: 100%;
     margin-top: 80px;
+    display: none;
+    opacity: 0;
+    animation:show .5s ;
     #sidebar {
       width: 133px;
       height: 542px;
@@ -246,218 +267,298 @@ body {
           width: 60%;
         }
       }
-    }
-    .players-area {
-      position: relative;
-      top: 150px;
-      padding: 0 20px;
-
-      .areas {
-        margin: 45px 0;
-        h3 {
-          color: white;
-          margin-bottom: 45px;
-        }
-        .area-card {
-          display: flex;
-          width: 98%;
-          background-color: var(--black-t2);
-          min-height: 317px;
-          border-radius: 5%;
-          border: 1px solid var(--black-t5);
-        }
-        #loFi-card {
-          //  width: 653px;
-          //  height: 317px;
-          position: relative;
-          padding: 29px 30px;
+      .players-area {
+        position: absolute;
+        top: 645px;
+        padding: 0 20px;
+        left: 23px;
+        z-index: 1005;
+        background: black;
+        padding: 0 0 80px 0;
+        .areas {
           margin: 45px 0;
-          .lofi-1 {
-            width: 100%;
-            height: 260px;
-            overflow: hidden;
-            margin-right: 16px;
-            img {
+          h3 {
+            color: white;
+            margin-bottom: 45px;
+          }
+          .area-card {
+            display: flex;
+            width: 98%;
+            background-color: var(--black-t2);
+            min-height: 317px;
+            border-radius: 43px;
+            border: 1px solid var(--black-t5);
+          }
+          #loFi-card {
+            //  width: 653px;
+            //  height: 317px;
+            position: relative;
+            padding: 29px 30px;
+            margin: 45px 0;
+            .lofi-1 {
               width: 100%;
-              border-radius: 10px;
-            }
-          }
-          .lofi-2 {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            img {
-              width: 134px;
-              margin: 5px;
-              border-radius: 8px;
-            }
-          }
-        }
-        #musics-card {
-          position: relative;
-          padding: 29px 30px;
-          display: flex;
-          flex-direction: column;
-          .music-area {
-            display: flex;
-            justify-content: space-between;
-            height: min-content;
-            align-items: center;
-            margin-top: 35px;
-            .img-music {
-              width: 60px;
-              height: 60px;
-              margin-right: 25px;
+              height: 260px;
+              overflow: hidden;
+              margin-right: 16px;
               img {
                 width: 100%;
-                border-radius: 5px;
+                border-radius: 10px;
               }
             }
-            .info-music {
+            .lofi-2 {
+              width: 100%;
               display: flex;
-              align-items: center;
-              width: 55%;
-              margin-right: 26px;
-              justify-content: inherit;
-              .info {
-                line-height: 31px;
-                .nome-music {
-                  color: white;
-                }
-                .nome-autor {
-                  color: var(--gray-t5);
-                }
-              }
-            }
-            .buttons-musics {
-              width: 122px;
-              height: 64px;
-              border: 1px solid var(--gray-t5);
-              padding: 5px;
-              position: relative;
-              border-radius: 35px;
+              flex-wrap: wrap;
+              justify-content: center;
               img {
-                margin: 0 5px;
-                position: absolute;
-                cursor: pointer;
-                transition: 0.5s ease-in-out opacity;
-                &:hover {
-                  opacity: 0.7;
-                }
-                &.play {
-                  top: 0px;
-                  right: -8px;
-                  background-color: var(--black-t2);
-                  border-radius: 50%;
-                }
-                &.heart {
-                  top: 15px;
-                  left: 15px;
-                  width: 30px;
-                }
+                width: 134px;
+                margin: 5px;
+                border-radius: 8px;
               }
             }
           }
-        }
-        #friends-card {
-          flex-direction: column;
-          padding: 10px 0;
-          min-width: 296px;
-          h3 {
-            margin-left: 15px;
-            margin-top: 25px;
-          }
-          #div-friends {
-            margin-bottom: 50px;
-            .friend-area {
+          #musics-card {
+            position: relative;
+            padding: 29px 30px;
+            display: flex;
+            flex-direction: column;
+            .music-area {
               display: flex;
-              padding: 10px;
+              justify-content: space-between;
+              height: min-content;
               align-items: center;
-              align-self: self-start;
-              margin-bottom: 10px;
-              .friend-picture {
-                width: 55px;
-                margin-right: 5px;
+              margin-top: 35px;
+              .img-music {
+                width: 60px;
+                height: 60px;
+                margin-right: 25px;
                 img {
                   width: 100%;
+                  border-radius: 5px;
                 }
               }
-              .friend-info {
+              .info-music {
                 display: flex;
-                flex-direction: column;
-                margin-left: 5px;
-                .friend-name {
-                  color: white;
-                  font-weight: 600;
+                align-items: center;
+                width: 55%;
+                margin-right: 26px;
+                justify-content: inherit;
+                .info {
+                  line-height: 31px;
+                  .nome-music {
+                    color: white;
+                  }
+                  .nome-autor {
+                    color: var(--gray-t5);
+                  }
                 }
-                .friend-status {
-                  color: var(--gray-t5);
-
-                  i {
-                    margin-right: 5px;
-                    color: rgb(0, 241, 0);
+              }
+              .buttons-musics {
+                width: 122px;
+                height: 64px;
+                border: 1px solid var(--gray-t5);
+                padding: 5px;
+                position: relative;
+                border-radius: 35px;
+                img {
+                  margin: 0 5px;
+                  position: absolute;
+                  cursor: pointer;
+                  transition: 0.5s ease-in-out opacity;
+                  width: 63px;
+                  &:hover {
+                    opacity: 0.7;
+                  }
+                  &.play {
+                    top: 0px;
+                    right: -8px;
+                    background-color: var(--black-t2);
+                    border-radius: 50%;
+                  }
+                  &.heart {
+                    top: 15px;
+                    left: 15px;
+                    width: 30px;
                   }
                 }
               }
             }
           }
-          .button-area{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            button{
-              width: 80%;
-              padding: 14px;
-              border: none;
-              background-color:var(--black-t5);
-              color: white;
-              border-radius: 8px;
-              transition: .4s ease-in-out background;
-              &:hover{
-                background-color: var(--black-t3) ;
+          #friends-card {
+            flex-direction: column;
+            padding: 10px 0;
+            min-width: 296px;
+            h3 {
+              margin-left: 15px;
+              margin-top: 25px;
+            }
+            #div-friends {
+              margin-bottom: 50px;
+              .friend-area {
+                display: flex;
+                padding: 10px;
+                align-items: center;
+                align-self: self-start;
+                margin-bottom: 10px;
+                .friend-picture {
+                  width: 55px;
+                  margin-right: 35px;
+                  img {
+                    width: 100%;
+                  }
+                }
+                .friend-info {
+                  display: flex;
+                  flex-direction: column;
+                  margin-left: 5px;
+                  .friend-name {
+                    color: white;
+                    font-weight: 600;
+                  }
+                  .friend-status {
+                    color: var(--gray-t5);
+
+                    i {
+                      margin-right: 5px;
+                      color: rgb(0, 241, 0);
+                    }
+                  }
+                }
+              }
+            }
+            .button-area {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              margin-bottom: 25px;
+              button {
+                width: 80%;
+                padding: 14px;
+                border: none;
+                background-color: var(--black-t5);
+                color: white;
+                border-radius: 8px;
+                transition: 0.4s ease-in-out background;
+                &:hover {
+                  background-color: var(--black-t3);
+                }
               }
             }
           }
         }
       }
+      #player-bottom {
+        position: fixed;
+        width: 100%;
+        background: var(--black-t2);
+        bottom: 0;
+        left: 0;
+        justify-content: space-evenly;
+        z-index: 1010;
+        padding: 20px 35px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        transform: translateY(200px);
+        transition: 0.4s ease-in-out transform;
+
+        &.abrir {
+          transform: translateY(0);
+        }
+        .player-bottom_music {
+          color: white;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          .img-music {
+            width: 68px;
+            margin-right: 30px;
+            img {
+              width: 100%;
+              border-radius: 5px;
+            }
+          }
+          .info {
+            margin-right: 50px;
+          }
+        }
+        .player-bottom_controls {
+          margin-left: 120px;
+          display: flex;
+          align-items: center;
+
+          .controls {
+            img {
+              &#play-button {
+                width: 60px;
+                border-radius: 50%;
+                margin: 0 25px;
+              }
+            }
+          }
+          .music-progressBar {
+            align-items: center;
+            display: flex;
+            margin-left: 60px;
+            position: relative;
+            .progressArea {
+              width: 500px;
+              height: 5px;
+              margin: 0 15px;
+              position: relative;
+              .progressBar {
+                width: 100%;
+                height: 100%;
+                background-color: var(--black-t5);
+              }
+              .CurrentprogressBar {
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                top: -1px;
+                background-color: var(--green-t1);
+              }
+            }
+          }
+          .volume-bar {
+            margin: 0 50px;
+            display: flex;
+            align-items: center;
+            .progressArea {
+              width: 100px;
+              height: 5px;
+              margin: 0 15px;
+              position: relative;
+              .progressBar {
+                width: 100%;
+                height: 100%;
+                background-color: var(--black-t5);
+              }
+              .CurrentprogressBar {
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                top: -1px;
+                background-color: var(--green-t1);
+              }
+            }
+          }
+          .controls-2 {
+            img {
+              margin: 0 10px;
+            }
+          }
+        }
+      }
+    }
+    .swiper-pagination-bullet {
+      background-color: red;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: white !important;
     }
   }
-}
-
-.swiper-pagination-bullet {
-  background-color: red;
-}
-.swiper-button-prev,
-.swiper-button-next {
-  color: white !important;
-}
-/*
- *  STYLE 15
- */
-
-body::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-  background-color: #f5f5f5;
-  border-radius: 10px;
-}
-
-body::-webkit-scrollbar {
-  width: 10px;
-  background-color: #f5f5f5;
-}
-
-body::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #fff;
-  background-image: -webkit-gradient(
-    linear,
-    40% 0%,
-    75% 84%,
-    from(#052500),
-    to(#004e04),
-    color-stop(0.6, #002402)
-  );
 }
 
 @media (max-width: 505px) {
@@ -468,6 +569,11 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 978px) {
   body #all-page #container-area #cards-track .cards .card .card-img {
     top: -155px !important;
+  }
+}
+@media (max-width: 660px) {
+  body #all-page #container-area #page-top #user-area {
+    display: none;
   }
 }
 @media (max-width: 1024px) {
@@ -509,7 +615,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (max-width: 1439px) and (min-width: 1189px) {
   body #all-page #container-area #cards-track {
-    max-width: 79vw;
+    max-width: 90vw;
   }
 }
 @media (max-width: 1440px) {
@@ -645,5 +751,453 @@ body::-webkit-scrollbar-thumb {
   body #all-page .players-area #friends-area {
     width: 100%;
     width: 100% !important;
+  }
+}
+@media (max-width: 481px) {
+  body
+    #all-page
+    #container-area
+    .players-area
+    .areas
+    #musics-card
+    .music-area
+    .buttons-musics
+    img.heart {
+    top: 69px;
+    left: 11px;
+    width: 30px;
+  }
+  body
+    #all-page
+    #container-area
+    .players-area
+    .areas
+    #musics-card
+    .music-area
+    .buttons-musics {
+    width: 59px;
+    height: 112px;
+  }
+  body
+    #all-page
+    #container-area
+    .players-area
+    .areas
+    #musics-card
+    .music-area
+    .info-music {
+    flex-direction: column;
+  }
+}
+@media (max-width: 375px) {
+  body
+    #all-page
+    #container-area
+    .players-area
+    .areas
+    #musics-card
+    .music-area
+    .buttons-musics
+    img.heart {
+    top: 47px;
+    left: 3px;
+  }
+  body
+    #all-page
+    #container-area
+    .players-area
+    .areas
+    #musics-card
+    .music-area
+    .buttons-musics {
+    width: 59px;
+    height: 82px;
+  }
+  body
+    #all-page
+    #container-area
+    .players-area
+    .areas
+    #musics-card
+    .music-area
+    .buttons-musics
+    img {
+    width: 46px;
+  }
+  body
+    #all-page
+    #container-area
+    .players-area
+    .areas
+    #musics-card
+    .music-area
+    .buttons-musics
+    img.play {
+    top: 0px;
+    right: -6px;
+  }
+}
+// MEDIA QUERY CONTROL MUSIC
+
+@media (max-width: 1744px) {
+  body
+    #all-page
+    #container-area
+    #player-bottom
+    .player-bottom_controls
+    .controls {
+    width: 60%;
+  }
+  body #all-page #container-area #player-bottom .player-bottom_controls {
+    width: 100%;
+    margin-left: 35px;
+  }
+  body
+    #all-page
+    #container-area
+    #player-bottom
+    .player-bottom_controls
+    .music-progressBar {
+    width: 100%;
+  }
+  body
+    #all-page
+    #container-area
+    #player-bottom
+    .player-bottom_controls
+    .music-progressBar
+    .progressArea {
+    width: 100%;
+  }
+  body
+    #all-page
+    #container-area
+    #player-bottom
+    .player-bottom_music
+    .info
+    .nome-music {
+    font-size: 1.1rem;
+  }
+  body
+    #all-page
+    #container-area
+    #player-bottom
+    .player-bottom_music
+    .info
+    .nome-autor {
+    font-size: 1.05rem;
+  }
+}
+@media (max-width: 1221px) {
+  body
+    #all-page
+    #container-area
+    #player-bottom
+    .player-bottom_controls
+    .controls
+    img#play-button {
+    width: 36px;
+  }
+  body
+    #all-page
+    #container-area
+    #player-bottom
+    .player-bottom_music
+    .heart-fav {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  body #all-page #container-area #player-bottom .player-bottom_music {
+    display: none;
+  }
+  body #all-page #container-area #player-bottom .player-bottom_controls {
+    margin: 0;
+  }
+  #back-button,
+  #next-button {
+    width: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  body #all-page #container-area #player-bottom {
+    display: none;
+  }
+}
+
+@media (max-width: 660px) {
+  body
+    #all-page
+    #container-area
+    #player-bottom
+    .player-bottom_controls
+    .volume-bar {
+    display: none !important;
+  }
+  body
+    #all-page
+    #container-area
+    #player-bottom
+    .player-bottom_controls
+    .controls-2 {
+    display: none;
+  }
+  body #all-page #container-area #page-top {
+    width: 75%;
+  }
+}
+
+#telaLogin.ativa {
+  width: 100%;
+  height: 100%;
+  background-color: var(--black-t2);
+  position: absolute;
+  top: -25px;
+  overflow: hidden;
+  z-index: 1100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .areaFormulario {
+    width: 65%;
+    height: 70%;
+    min-height: 500px;
+    background-color: white;
+    border-radius: 45px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    .boxForm {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      align-items: center;
+      transition: 0.3s ease transform, opacity;
+      padding: 10px 12px;
+
+      .form-top {
+          width: 35%;
+          position: absolute;
+          top: 39px;
+        img {
+          width: 100%;
+        }
+      }
+      .formulario {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin-top: 60px;
+        #aviso-invalido{
+          color: red;
+          display: none;
+        }
+        label {
+          font-size: 17px;
+          margin: 5px 2px;
+          font-weight: 600;
+        }
+        input {
+          margin-bottom: 10px;
+          width: 100%;
+          background-color: none;
+          padding: 5px;
+          border: none;
+          border-bottom: 1px solid #04b344;
+          outline: none;
+
+          &[type="submit"], [type="button"] {
+            border: none;
+            border-radius: 5px;
+            background-color: #06cc4e;
+            color: white;
+            font-weight: 600;
+          }
+          &::placeholder {
+            color: var(--black-t5);
+            font-size: 14px !important;
+          }
+        }
+        .remember-box {
+          display: flex;
+          align-items: center;
+          position: relative;
+          margin-bottom: 20px;
+          label {
+            width: 100%;
+            font-size: 15px;
+            text-align: center;
+          }
+          input {
+          }
+        }
+        .alternateForms {
+          margin-top: 25px;
+          color: black;
+          font-size: 5px !important;
+          align-self: center;
+    
+          span {
+            color: #04b344;
+            cursor: pointer;
+           
+            &:hover{
+              color: #009e3a;
+            }
+          }
+          &,
+          span {
+            font-size: 14px !important;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .textBox {
+      width: 45%;
+      background-color: var(--green-t1);
+      left: 0;
+      background: url(../medias/img/loginImg/2.jpg);
+      background-position: center;
+      background-size: cover;
+      &.modoRegistro {
+        transform: translateX(123%);
+      }
+      &.modoLogin {
+        transform: translateX(0%);
+      }
+    }
+
+    #login-area {
+      width: 55%;
+      background: white;
+      right: 0;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      #entrarLogin{
+        border: none;
+        border-radius: 5px;
+        background-color: #06cc4e !important;
+        color: white;
+        font-weight: 600;
+      }
+      &.modoRegistro {
+        transform: translateX(-190%);
+        opacity: 0;
+      }
+      &.modoLogin {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+    }
+    #register-area {
+      width: 55%;
+      right: 0;
+      transform: translateX(100%);
+      background: rgb(255, 255, 255);
+      .formulario {
+        margin-top: 55px;
+        .alternateForms {
+          margin-top: 0px;
+        }
+      }
+      &.modoRegistro {
+        opacity: 1;
+        transform: translateX(-82%);
+      }
+      &.modoLogin {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+    }
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@media (max-width:1444px){
+  #telaLogin.ativa .areaFormulario .boxForm .formulario {
+    width: 80%;
+  }
+}
+@media (max-width: 936px) {
+  #telaLogin.ativa .areaFormulario .textBox {
+    display: none;
+  }
+  .boxForm {
+    width: 100% !important;
+  }
+  #login-area {
+    &.modoRegistro {
+      transform: translateX(-100%);
+      opacity: 1 !important;
+    }
+    &.modoLogin {
+      opacity: 1 !important;
+      transform: translateX(0%);
+    }
+  }
+  #register-area {
+    &.modoRegistro {
+      opacity: 1 !important;
+      transform: translateX(0%) !important;
+    }
+    &.modoLogin {
+      transform: translateX(100%) !important;
+      opacity: 1 !important;
+    }
+  }
+}
+
+@media(min-width:1440px){
+  #telaLogin.ativa .areaFormulario .boxForm .formulario label {
+    font-size: 21px;
+
+    &::placeholder{
+      font-size: 106px;
+    }
+}
+#telaLogin.ativa .areaFormulario .boxForm .formulario .alternateForms, #telaLogin.ativa .areaFormulario .boxForm .formulario .alternateForms span {
+  font-size: 1.3rem !important;
+}
+}
+@media (min-width: 1124px) {
+  #telaLogin.ativa .areaFormulario .boxForm .formulario input[type="checkbox"] {
+    width: 5%;
+    align-self: self-end;
+  }
+  #telaLogin.ativa .areaFormulario .boxForm .formulario .remember-box label {
+    width: 36%;
+  }
+}
+
+@media (max-width: 936px) {
+  #telaLogin.ativa .areaFormulario {
+    width: 96%;
+    border-radius: 17px;
+  }
+  #telaLogin.ativa .areaFormulario .boxForm .formulario input[type="checkbox"] {
+    width: 5%;
+    align-self: self-end;
+  }
+  #telaLogin.ativa .areaFormulario .boxForm .formulario .remember-box label {
+    width: 31%;
+  }
+
+  #telaLogin.ativa .areaFormulario .boxForm .formulario {
+    width: 94%;
   }
 }

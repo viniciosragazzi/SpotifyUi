@@ -65,7 +65,7 @@
             <div id="page-top">
                 <div id="search-area">
                     <img src="./assets/medias/img/topoAssets/EllipseSearch.svg" alt="EllipseSearch">
-                    <input type="search" name="search-topo" placeholder="Search..." id="search-topo">
+                    <input required type="search" name="search-topo" placeholder="Search..." id="search-topo">
                     <div class="filter-btn">
                         <img src="./assets/medias/img/topoAssets/adjustments.svg" alt="" srcset="">
                         <span>Filter</span>
@@ -82,7 +82,7 @@
             <!-- Slider main container -->
             <div id="cards-track" class="swiper">
                 <!-- Additional required wrapper -->
-                <h3 class="text-2xl">PlayList For You</h3>
+                <h3 class="text-2xl" id="title-top">PlayList For You</h3>
                 <div class="cards swiper-wrapper">
                     <!-- Slides -->
                     <div class="card yellow swiper-slide ">
@@ -253,7 +253,7 @@
             </div>
 
             <div class="players-area row col-12">
-                 <!----------------LISTEN AREA----------------->
+                <!----------------LISTEN AREA----------------->
                 <div id="listen-area" class="areas col-12 col-xl-5">
                     <h3 class="text-2xl area-title">
                         What you listen to the most
@@ -293,7 +293,7 @@
                     </div>
                 </div>
                 <!----------------TRACKS AREA----------------->
-                <div id="tracks-area" class="areas col-12 col-xl-5">
+                <div id="tracks-area" class="areas col-12 col-xl-4">
                     <h3 class="text-2xl area-title">
                         Tracks of the week
                     </h3>
@@ -301,8 +301,8 @@
                     </div>
                 </div>
 
-                 <!----------------FRIENDS AREA----------------->
-                <div id="friends-area" class="areas col-12 col-xl-2">
+                <!----------------FRIENDS AREA----------------->
+                <div id="friends-area" class="areas col-12 col-xl-3">
                     <h3 class="text-2xl area-title">
                         Friends Activity
                     </h3>
@@ -310,19 +310,68 @@
                         <h3 class="text-2xl">My Friends</h3>
 
                         <div id="div-friends">
-                          
+
                         </div>
-                        
+
                         <div class="button-area">
                             <button id="view-all"> View All</button>
                         </div>
                     </div>
-                    
-                   
+
+
                 </div>
+
+            </div>
+            <!---PLAYER BOTTOM AREA-->
+            <div id="player-bottom">
+
             </div>
         </div>
+    </div>
+    <div id="telaLogin" class="ativa">
+        <div class="areaFormulario">
+            <div class="textBox boxForm"> 
+               
+            </div>
+            <div id="login-area" class="boxForm">
+                <div class="form-top">
+                    <img src="./assets/medias/img/loginImg/spotfy.png" alt="spotify-icon">
+                </div>
+                <form id="form-login" class="formulario">
+                    <label for="usernameLogin">Username</label>
+                    <input required type="text" id="usernameLogin" name="usernameLogin" class="field-login" placeholder="Username">
+                    <label for="passwordLogin">Password</label>
+                    <input required type="password" id="passwordLogin" name="passwordLogin" class="field-login"  placeholder="Your Password">
+                    <input type="button" value="Entrar" id="entrarLogin">
+                    <small id="aviso-invalido">Username or Password invalid.</small>
+                    <div class="remember-box">
+                        <label for="rememberPass">Lembrar senha?</label>
+                        <input type="checkbox" name="rememberPass" id="rememberPass">
+                    </div>
 
+                    <p class="alternateForms">Ainda não tem uma conta? <span class="toRegister">Crie uma agora</span></p>
+                </form>
+            </div>
+            <div id="register-area" class="boxForm">
+                <div class="form-top">
+                    <img src="./assets/medias/img/loginImg/spotfy.png" alt="spotify-icon">
+                </div>
+                <form id="form-register" class="formulario">
+                    <label for="nameRegister">Name</label>
+                    <input required type="text" id="nameRegister" class="field-reg" name="nameRegister" placeholder="Your Name">
+                    <label for="usernameRegister">Username</label>
+                    <input required type="text" id="usernameRegister" class="field-reg" name="usernameRegister" placeholder="Your Username">
+                    <label for="emailRegister">Email</label>
+                    <input required type="email" id="emailRegister" class="field-reg" name="emailRegister" placeholder="Email">
+                    <label for="passwordRegister">Password</label>
+                    <input required type="password" id="passwordRegister" class="field-reg" name="passwordRegister"
+                        placeholder="Your Password">
+                    <input type="submit" value="Criar conta" id="enviarRegister">
+                   
+                    <p class="alternateForms">Já possui uma conta? <span class="toLogin">Faça login</span></p>
+                </form>
+            </div>
+        </div>
     </div>
 
     <!--=============SWIPPER JS ==================-->
